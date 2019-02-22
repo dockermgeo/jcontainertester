@@ -1,8 +1,10 @@
 jenvsecrets.iml
 target/
 target
-target/classes target/generated-sources target/jcontester-0.0.3.jar target/jcontester-0.0.3.jar.original target/maven-archiver target/maven-status
+target/*
 *.log
 .DS_Store
 .tmp
 .idea
+mvnw
+mvnw.cmd
