@@ -55,7 +55,7 @@ public class IndexController {
         out.append("<link href='/style.css' rel='stylesheet' type='text/css'>");
         out.append("<style>"+cssc+"</style>");
         out.append("</head><body><div class='container'><h1><span class='fas fa-hippo'></span> "+html_title+"</h1>");
-        out.append("<div class='navigation'>Start - <a href='env.html'>ENV-Sets</a> - <a href='secrets.html'>Secrets</a> - <a href='aufgabe.html'>Aufgabe</a></div>");
+        out.append("<div class='navigation'><span class='fas fa-home'></span> | <span class='fab fa-linux'></span> <a href='env.html'>ENV-Sets</a> | <span class='fas fa-key'></span> <a href='secrets.html'>Secrets</a> | <span class='fas fa-child'></span> <a href='mission.html'> Mission</a></div>");
         out.append("<h3><span class='fab fa-linux'></span> Env-Sets</h3><ul>");
         out.append(printEnv("LOG_LEVEL"));
         out.append(printEnv("LOG_LEVEL_ROOT"));
