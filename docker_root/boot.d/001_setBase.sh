@@ -9,6 +9,3 @@ fi
 
 echo "# Autogen by Docker.boot">>$F
 echo "de.mgeo.title=${HTML_TITLE}" >>$F
-
-# TMP-TEST
-echo "9999" >/version

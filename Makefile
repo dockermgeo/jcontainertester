@@ -1,4 +1,4 @@
-dci=dockermgeo/jenvsecrets
+dci=dockermgeo/jcontester
 
 install: java.build
 
@@ -7,14 +7,15 @@ java.build:
 	mvn clean install
 
 java.run:
-	java -jar target/jenvsecrets-0.0.1.jar
+	java -jar target/jcontester-0.0.3.jar
 
 build: docker.build docker.run
 docker.build: java.build
+	bash pre_build.sh
 	docker build -t $(dci) .
 
 docker.run:
 	docker run -ti --rm -p 8080:8080 $(dci)
 
 docker.test: 
-	docker run -ti --rm -p 8080:8080 -e LOG_LEVEL=debug -e LOG_LEVEL_ROOT=off $(dci)
+	docker run -ti --rm -p 8080:8080 -e LOG_LEVEL=info -e LOG_LEVEL_ROOT=off $(dci)

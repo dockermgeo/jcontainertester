@@ -5,3 +5,4 @@ target/classes target/generated-sources target/jcontester-0.0.3.jar target/jcont
 *.log
 .DS_Store
 .tmp
+.idea
