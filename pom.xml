@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>de.mgeo</groupId>
-	<artifactId>jenvsecrets</artifactId>
-	<version>0.0.1</version>
-	<name>jenvsecrets</name>
+	<artifactId>jcontester</artifactId>
+	<version>0.0.3</version>
+	<name>JConTester</name>
 	<description>ENV + Secrets</description>
 
 	<properties>

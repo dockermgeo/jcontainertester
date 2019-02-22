@@ -17,4 +17,4 @@ docker.run:
 	docker run -ti --rm -p 8080:8080 $(dci)
 
 docker.test: 
-	docker run -ti --rm -p 8080:8080 -e LOG_LEVEL=trace -e LOG_LEVEL_ROOT=trace $(dci)
+	docker run -ti --rm -p 8080:8080 -e LOG_LEVEL=debug -e LOG_LEVEL_ROOT=off $(dci)

@@ -1,6 +1,6 @@
-package de.mgeo.jenvsecrets.controllers;
+package de.mgeo.jcontest.controllers;
 
-import de.mgeo.jenvsecrets.JenvsecretsApplication;
+import de.mgeo.jcontest.JContTestApplication;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.core.env.Environment;
@@ -15,7 +15,7 @@ import java.io.IOException;
 @RestController
 @RequestMapping("/")
 public class IndexController {
-    private static final Logger logger = LogManager.getLogger(JenvsecretsApplication.class);
+    private static final Logger logger = LogManager.getLogger(JContTestApplication.class);
 
     @Autowired
     private Environment env;

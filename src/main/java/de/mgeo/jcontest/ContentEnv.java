@@ -1,11 +1,11 @@
-package de.mgeo.jenvsecrets;
+package de.mgeo.jcontest;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 
 public class ContentEnv {
-    private static final Logger logger = LogManager.getLogger(JenvsecretsApplication.class);
+    private static final Logger logger = LogManager.getLogger(JContTestApplication.class);
 
     ContentEnv() {
         printline("*",150);
