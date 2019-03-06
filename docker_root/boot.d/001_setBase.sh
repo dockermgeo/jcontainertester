@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
 
 F=/application.properties
-HTML_TITLE=${HTML_TITLE:-"Workshop jTester"}
+HTML_TITLE=${HTML_TITLE:-"jConDemo - Workshop"}
 
-if [ -f $F ]; then
-    rm -f $F
-fi
 
-echo "# Autogen by Docker.boot">>$F
-echo "de.mgeo.title=${HTML_TITLE}" >>$F
+echo "# Autogen by Docker.boot">$F
+echo "spring.thymeleaf.cache=false" >>$F
+echo "html.title=${HTML_TITLE}" >>$F

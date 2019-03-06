@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title th:text="'|| ' + ${html_title} + ' ||'"></title>
+    <link rel="stylesheet" th:href="@{webjars/bootstrap/4.3.1/css/bootstrap.min.css}"/>
+    <script src="webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" th:href="@{webjars/font-awesome/4.7.0/css/font-awesome.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+    <script src="webjars/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#"><span class="fa fa-angellist"></span> <span th:text="${html_title}"></span></a>
+</nav>
+
+<main role="main" class="container">
+    <div class="boxing_center">
+        <div class="boxing box_text" style="width: 120px;">
+            <center>
+                <p class="fa fa-flag" style="font-size: 2.5em;"></p>
+                <p th:text="${html_version}" style="font-size: 1.2em;"></p>
+                <p style="position: absolute; top: 180px;font-size: 10px;color:#ccc;font-weight:bold;padding-left: 3.3em;">
+                    Deployment</p>
+            </center>
+        </div>
+
+        <div class="boxing box_arrow"><span class="fa fa-long-arrow-right"></span></div>
+        <div class="boxing box_li" style="width: 170px;">
+            <li th:class="${isEnv}? li-active : li">
+                <nobr><span th:class="${isEnv}? 'fa fa-dot-circle-o' : 'fa fa-circle-o'"></span>
+                    <span>ENV-Variable</span></nobr>
+            </li>
+            <li th:class="${isSecret}? li-active : li">
+                <nobr><span th:class="${isSecret}? 'fa fa-dot-circle-o' : 'fa fa-circle-o'"></span> <span>Secret</span>
+                </nobr>
+            </li>
+            <li th:class="${isConfigMap}? li-active : li">
+                <nobr><span th:class="${isConfigMap}? 'fa fa-dot-circle-o' : 'fa fa-circle-o'"></span>
+                    <span>Configmap</span></nobr>
+            </li>
+        </div>
+
+
+        <div class="boxing box_arrow"><span class="fa fa-long-arrow-right"></span></div>
+        <div class="boxing box_text" style="width: 120px;">
+            <center>
+                <p th:class="'btn btn-'+${buttonclass}" th:text="${buttontext}"></p>
+                <p style="position: absolute; top: 180px;color:#ccc;font-weight:bold;font-size: 10px;padding-left: 4em;">
+                    Loglevel</p>
+            </center>
+        </div>
+
+
+        <div class="boxing-clear"></div>
+    </div>
+
+    <div style="margin-top: 3em;padding: 0.4em 1em;" class="container">
+        <h3>Lessions</h3>
+        After each lession, redeploy your container and watch in your webbrowser and deploymentconsole.
+        <div id="accordion">
+            <div class="card lessionsection">
+                <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#envvars" style="float:left;">1) ENV-Variables</a>
+                    <a th:href="${link_envs}" style="float:right;"><span class="fa fa-question-circle"></span></a>
+                </div>
+
+                <div id="envvars" class="collapse hide" data-parent="#accordion">
+                    <div class="card-body">
+                        <ol>
+                            <li>Change ENV-Variable <b>LOGLEVEL_APP</b></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card lessionsection">
+                <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#secrets" style="float:left;">2) Secrets</a>
+                    <a th:href="${link_secrets}" style="float:right;"><span class="fa fa-question-circle"></span></a>
+                </div>
+
+                <div id="secrets" class="collapse hide" data-parent="#accordion">
+                    <div class="card-body">
+                        <ol>
+                            <li>Create a secret with a File <b>logging.properties</b></li>
+                            <li>Define <b>LOGLEVEL_APP</b> in this file</li>
+                            <li>Mount this secret in your Container on <b>/secrets/</b></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card lessionsection">
+                <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#configmap" style="float:left;">3) Configmap</a>
+                    <a th:href="${link_configmaps}" style="float:right;"><span class="fa fa-question-circle"></span></a>
+                </div>
+
+                <div id="configmap" class="collapse hide" data-parent="#accordion">
+                    <div class="card-body">
+                        <ol>
+                            <li>Create a Configmap with a file <b>logging.properties</b></li>
+                            <li>Define <b>LOGLEVEL_DOMAIN</b> in this file</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+</main>
+<!-- /.container -->
+
+<script type="text/javascript" th:src="@{webjars/bootstrap/4.3.1/js/bootstrap.min.js}"></script>
+</body>
+</html>

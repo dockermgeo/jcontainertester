@@ -1,0 +1,26 @@
+body {
+  padding-top: 5rem;
+}
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+p {padding: 0; margin: 0;}
+
+
+h3 { font-size: 1.6em; font-weight:bold;  letter-spacing 1px;}
+h4 { font-size: 1.1em; margin-top: 1em; font-weight:bold; padding-top:4px; border-top: 2px solid #ccc; }
+
+div.boxing_center { width: 800px; margin: 0 auto;}
+div.boxing { float:left; height: 100px; }
+div.box_text { border-radius: 5px; border: 2px dotted #ccc;  padding-top: 1em; }
+div.box_li { list-style-type: none; border-radius: 5px; border: 2px dotted #ccc;  padding-top: 1em; padding-left: 1em; }
+.box_arrow {  padding-top: 0; font-size: 4em; margin-left: 0.5em; margin-right: 0.5em;}
+.boxing-clear { clear:left; }
+.li-active {font-weight:bold;color: black;}
+.li{color: #ccc; }
+.lessionsection{margin-top: 0.3em;margin-left: 0.4em;}
+
+a.card-link {color: #ccc; font-weight: bold;}
+a:hover.card-link {color: darkblue; font-weight: bold;}

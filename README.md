@@ -19,7 +19,7 @@ Build with [this Makefile](Makefile)
 ```
 
 ```
-    docker run -ti --rm -p 8080:8080 -e LOG_LEVEL=debug dockermgeo/jcontester
+    docker run -ti --rm -p 8080:8080 -e LOGLEVEL_APP=debug dockermgeo/jcontester
 ```
 
 
