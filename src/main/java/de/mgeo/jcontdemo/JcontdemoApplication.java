@@ -9,7 +9,7 @@ public class JcontdemoApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(JcontdemoApplication.class, args);
-		//new CurrentLogger();
+		new CurrentLogger();
 	}
 
 }

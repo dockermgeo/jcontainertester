@@ -1,6 +1,6 @@
 PROJECT=jcontester
 GROUP=dockermgeo
-VERSION=0.0.7
+VERSION=0.0.8
 
 install: java.build
 
@@ -28,12 +28,16 @@ java.release: java.build
 # DOCKER
 #
 build: docker.build docker.run
+release: java.release docker.build docker.push
 docker.build: java.build
 	sh pre_build.sh
 	docker build -t $(GROUP)/$(PROJECT) -f Dockerfile .
 
 docker.run:
 	docker run -ti --rm -p 8080:8080 $(GROUP)/$(PROJECT)
+
+docker.push:
+	docker push $(GROUP)/$(PROJECT)
 
 test.env:
 	docker run -ti --rm -p 8080:8080 -e LOGLEVEL_APP=debug -e LOG_LEVEL_ROOT=off $(GROUP)/$(PROJECT)
