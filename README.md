@@ -4,7 +4,7 @@ Springboot based containertester for secrets and environmentvariables.
 
 ### Java Build & Run
 ```
-    mvn clean install && java -jar target/jcontester-0.0.3.jar
+    mvn clean install && java -jar target/jcontester-0.0.8.jar
 ```
 
 ### Docker Build & run
