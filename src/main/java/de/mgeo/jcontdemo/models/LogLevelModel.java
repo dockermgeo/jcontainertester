@@ -26,6 +26,8 @@ public class LogLevelModel {
 
         if (value == null)
             value = "error";
+
+        this.setBtn(value);
     }
 
     public boolean isEnv() {
