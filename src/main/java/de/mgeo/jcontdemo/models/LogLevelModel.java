@@ -27,6 +27,7 @@ public class LogLevelModel {
         if (value == null)
             value = "error";
 
+        //Switch Colors
         this.setBtn(value);
     }
 
