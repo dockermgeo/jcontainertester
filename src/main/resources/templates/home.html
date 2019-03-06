@@ -104,6 +104,10 @@
 
                 <div id="configmap" class="collapse hide" data-parent="#accordion">
                     <div class="card-body">
+                        <div class="alert alert-warning" role="alert">
+                            Configmaps are not available on Docker native!
+                        </div>
+
                         <ol>
                             <li>Create a Configmap with a file <b>logging.properties</b></li>
                             <li>Define <b>LOGLEVEL_DOMAIN</b> in this file</li>
