@@ -1,7 +1,8 @@
 <!DOCTYPE HTML>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html>
 <head>
     <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" >
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title th:text="'|| ' + ${html_title} + ' ||'"></title>
     <link rel="stylesheet" th:href="@{webjars/bootstrap/4.3.1/css/bootstrap.min.css}"/>
@@ -121,7 +122,8 @@
 
 <footer>
     <div>
-        <a href="https://github.com/dockermgeo/jcontainertester" title="sources from mgeode"><span class="fa fa-github"></span> Source on github</a>
+        <a href="https://github.com/dockermgeo/jcontainertester" title="sources on github"><span class="fa fa-github"></span> Source on github</a>
+        <a href="https://hub.docker.com/r/dockermgeo/jcontester" title="dockerimage on dockerhub"><img src="gfx/dockericon.png" class="fa-img"> Dockerimage on dockerhub</a>
     </div>
 </footer>
 

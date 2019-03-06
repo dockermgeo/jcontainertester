@@ -25,6 +25,6 @@ div.box_li { list-style-type: none; border-radius: 5px; border: 2px dotted #ccc;
 a.card-link {color: #ccc; font-weight: bold;}
 a:hover.card-link {color: darkblue; font-weight: bold;}
 
-footer { position:fixed; bottom: 0; left:0; right:0;padding: 0.8em; background-color: #343a40;color:white;border-bottom: grey;text-align:center;font-size:80%;}
-footer a, a:hover {color:white; padding-right: 1em;}
-footer span {font-size: 140%;}
+footer { position:fixed; bottom: 0; left:0; right:0;padding: 0.8em; background-color: #343a40;color:white;border-bottom: grey;text-align:center;font-size:13px;}
+.fa-img{ height: 18px;}
+footer a, a:hover {color:white; padding-right: 1em;text-decoration:none;}
